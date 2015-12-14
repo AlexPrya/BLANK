@@ -1,46 +1,46 @@
 //
-// owl.carusel.js
+//// owl.carusel.js
 //
 
-$('.left-slider-body').owlCarousel({
-    items:1,
-    dots: false,
-    nav:false
-});
+  //$('.className').owlCarousel({
+  //    items:1,
+  //    dots: false,
+  //    nav:false
+  //});
 
-$('.main-slider').owlCarousel({
-    nav:false,
-    dots: true,
-    autoPlay: true,
-    autoplayHoverPause: true,
-    dotsSpeed: 500,
-    items:1
-});
+  //$('.className').owlCarousel({
+  //    nav:false,
+  //    dots: true,
+  //    autoPlay: true,
+  //    autoplayHoverPause: true,
+  //    dotsSpeed: 500,
+  //    items:1
+  //});
 
 
-
-//
-// bootstrap.js
-//
-
-$('#need_feedback').popover({
-    html : true,
-    content: function() {
-        return $('#need_feedback_content').html();
-    }
-});
 
 //
-// lightbox
+//// bootstrap.js
 //
 
-$(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
-    event.preventDefault();
-    $(this).ekkoLightbox();
-});
+  //$('.className').popover({
+  //    html : true,
+  //    content: function() {
+  //        return $('#need_feedback_content').html();
+  //    }
+  //});
 
 //
-// other
+//// lightbox
+//
+
+//$(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
+//    event.preventDefault();
+//    $(this).ekkoLightbox();
+//});
+
+//
+//// other
 //
 
 $('.preventDefault').each(
