@@ -1,0 +1,115 @@
+// get mixins and variables
+@import "mixins/mixins";
+@import "variables";
+
+@font-face {
+  font-family: 'Textbook New Web';
+  src: local('Textbook New Web');
+  src: url("../fonts/TextbookNewWebRegular.ttf") format("truetype");
+
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Textbook New Web';
+  src: local('Textbook New Web');
+  src: url("../fonts/TextbookNewWebExtraBold.ttf") format("truetype");
+
+  font-weight: bold;
+  font-style: normal;
+}
+
+body {
+  font-size: $font-size-base;
+  font-family: "Textbook New Web";
+  font-weight: normal;
+  color: $color-font-default;
+}
+
+footer {
+  width: 100%;
+}
+
+h5 {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+h4 {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+
+  li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+img {
+
+  &.centered {
+    margin: 0 auto;
+  }
+}
+
+.text {
+
+  &-block {
+
+    ul{
+      margin: 0 0 15px;
+      padding: 0;
+
+      li {
+        position: relative;
+        padding: 0 0 5px 28px;
+
+        &:before {
+          content: '';
+          position: absolute;
+          top: 2px;
+          left: 0;
+          background-image: url( $directory-image-base + 'check-red.png' );
+          @include background-image-style();
+          width: 18px;
+          height: 16px;
+        }
+      }
+    }
+
+    ol{
+      margin: 0 0 15px;
+      padding: 0;
+      list-style: none;
+      @include number-list();
+
+      li {
+        position: relative;
+        padding: 0 0 5px 28px;
+
+        &:before {
+          content: '';
+          position: absolute;
+          top: -4px;
+          left: 0;
+          color: $color-first;
+          width: 18px;
+          height: 16px;
+          font-size: 20px;
+          font-weight: bold;
+        }
+      }
+    }
+
+    span {
+      color: $color-font-disabled;
+    }
+  }
+}
